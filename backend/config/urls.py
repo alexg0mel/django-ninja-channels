@@ -24,5 +24,5 @@ apipatterns = [
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include((apipatterns, 'api'), namespace='api')),
+    path('api/', include(apipatterns)),
 ]
