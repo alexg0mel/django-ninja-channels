@@ -1,0 +1,25 @@
+#General
+DEBUG=True
+
+
+# Django
+# ------------------------------------------------------------------------------
+SECRET_KEY=django-insecure-wb5=oo4v%=_$x-nn_2_7mr8$3g7&ny6=c6fjp-mf)trgt98f32
+AUTH_SERVER_KEY_JSON={"kty": "RSA", "alg": "RS256", "use": "sig", "kid": "fb462757523d9da0c07bce343bf9b95d", "n": "ouKDG2p-tp-iZRizwbup5FKqJPE3IZIzVjP-3LT979ZMoDg1wu8kS9AnrMhrFqXChVpG9ilGecvRmvpBw2WOg44q3vatA6yjv8JbmXFIqD1T9LmnJHcXZOs_mh2H_lPDIIChHmHimlqfBFZuwjQm6zUQ_9xuoxB4cWsAKKJI4iVkwvIpOtMQAp_qVFLx6WlC-Tv6pto5lI25tUqnnvMrI87ZKQyRIY2NMb3lGEsaQ8z2ogu2jIzbvpEPiwd703w8DJDoqNuhiCEABEOxBjE9eN1uKNBFfYYz7XBVVVHfjRFmcJZYGIAiVjVs-PU_pmAu3W_qcsWjQ0id0K6DqT5raw", "e": "AQAB"}
+AUTH_SERVER_AUDIENCE=880208
+AUTH_SERVER_URL=https://auth.pricegsm.ru
+
+
+
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_DB=new_django_db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres_local_Pa$$w0rd
+POSTGRES_SERVICE=db
+POSTGRES_PORT=5432
+
+# Redis
+# ------------------------------------------------------------------------------
+REDIS_URL=redis://redis:6379/
+
