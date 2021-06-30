@@ -1,8 +1,12 @@
+from typing import List
+
 import django.core.handlers.wsgi
 from ninja import NinjaAPI, Path
 from django.urls import path
 
 from ..schemas.testing import TestSchema, TestResponseSchema, PathDate
+from ..schemas.models import CountrySchema
+from ..models import Country
 
 api = NinjaAPI()
 
@@ -24,6 +28,11 @@ def root(request: django.core.handlers.wsgi.WSGIRequest, body: TestSchema):
 @api.get("/events/{year}/{month}/{day}")
 def events(request, date: PathDate = Path(...)):
     return {"date": date.value()}
+
+
+@api.get("/countries", response=List[CountrySchema])
+def get_countries(request):
+    return Country.objects.all()
 
 
 urlpatterns = [
