@@ -1,10 +1,13 @@
-from pydantic import BaseModel
+from ninja import Schema
 
 
-class TestSchema(BaseModel):
+class TestSchema(Schema):
     input: str
     x: int
 
+    def result(self):
+        return TestResponseSchema(result=self.input * self.x)
 
-class TestResponseSchema(BaseModel):
+
+class TestResponseSchema(Schema):
     result: str

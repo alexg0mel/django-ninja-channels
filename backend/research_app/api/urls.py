@@ -16,7 +16,8 @@ def root(request):
 def root(request: django.core.handlers.wsgi.WSGIRequest, body: TestSchema):
 
     # return {'result': body.input * body.x}
-    return TestResponseSchema(result=body.input * body.x)
+    # return TestResponseSchema(result=body.input * body.x)
+    return body.result()
 
 
 urlpatterns = [
