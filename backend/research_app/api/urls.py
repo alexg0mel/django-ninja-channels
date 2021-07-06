@@ -1,4 +1,5 @@
 from typing import List
+import asyncio
 
 import django.core.handlers.wsgi
 from ninja import NinjaAPI, Path
@@ -33,6 +34,13 @@ def events(request, date: PathDate = Path(...)):
 @api.get("/countries", response=List[CountrySchema])
 def get_countries(request):
     return Country.objects.all()
+
+
+@api.get("/delay")
+async def delay_view(request):
+    """ test async """
+    await asyncio.sleep(2)
+    return {'asd': 'zxc'}
 
 
 urlpatterns = [
