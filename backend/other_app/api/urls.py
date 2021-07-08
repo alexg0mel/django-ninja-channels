@@ -6,5 +6,5 @@ router = Router()
 
 
 @router.get("/")
-def root(request):
+def other_root(request):
     return {'i`m': 'other app'}
