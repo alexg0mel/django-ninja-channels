@@ -16,3 +16,6 @@ help:
 #c=<command>
 run:
 	docker-compose exec app python manage.py $(c)
+
+perm:
+	sudo chown -R alexgomel backend/

@@ -289,3 +289,6 @@ celerybeat-schedule
 
 ### Code ###
 .vscode/*
+
+# static
+backend/static/*
