@@ -281,8 +281,6 @@ tags
 ### PyCharm setting path
 .idea
 
-### Postgres database docker files
-postgres
 
 ###Celery
 celerybeat-schedule

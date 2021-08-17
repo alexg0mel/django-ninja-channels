@@ -9,6 +9,7 @@ class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
         print('connect')
         print(self.scope)
+        print(self.scope['user-agent'])
         await self.accept()
         await self.send(text_data="[Welcome %s!]" % self.username)
 
